@@ -24,8 +24,8 @@ app.post('/createPayment', function(req, res) {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "http://localhost:3000/executePayment",
-            "cancel_url": "http://localhost:3000/cancelPayment"
+            "return_url": "https://backenrestaurante.onrender.com/executePayment",
+            "cancel_url": "https://backenrestaurante.onrender.com/cancelPayment"
         },
         "transactions": [{
             "item_list": {
