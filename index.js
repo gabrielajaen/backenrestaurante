@@ -87,7 +87,11 @@ app.get('/executePayment', function(req, res) {
     });
 });
 
-
+app.get('/', async (req, res) => {
+  res.status(200).json({
+    message: "Hello World!"
+  })
+});
 
 app.get('/cancelPayment', function(req, res) {
     res.redirect('http://localhost:8100/carrito');
