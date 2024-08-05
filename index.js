@@ -82,7 +82,7 @@ app.get('/executePayment', function(req, res) {
             throw error;
         } else {
             console.log(JSON.stringify(payment));
-            res.redirect(`http://localhost:8100/pagoexito?paymentId=${paymentId}`);
+            res.redirect(`myapp://pagoexito?paymentId=${paymentId}`);
         }
     });
 });
@@ -94,7 +94,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/cancelPayment', function(req, res) {
-    res.redirect('http://localhost:8100/carrito');
+    res.redirect('myapp://carrito');
 })
 app.listen(3000, function() {
     console.log('Server is running on port 3000');
