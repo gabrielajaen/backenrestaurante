@@ -79,11 +79,11 @@ app.get('/executePayment', function(req, res) {
     paypal.payment.execute(paymentId, execute_payment_json, function(error, payment) {
         if (error) {
             console.log(error.response);
-            throw error;
+            res.status(500).send({ error: 'Payment execution failed' });
         } else {
             console.log(JSON.stringify(payment));
-           res.redirect(`myapp://pagoexito?paymentId=${paymentId}`);
-
+            // Cambiar a una URL de prueba
+            res.redirect(`https://example.com/pagoexito?paymentId=${paymentId}`);
         }
     });
 });
