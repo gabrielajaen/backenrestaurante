@@ -82,8 +82,7 @@ app.get('/executePayment', function(req, res) {
             throw error;
         } else {
             console.log(JSON.stringify(payment));
-           
-            res.redirect('myapp://pagoexito');
+           res.redirect(`myapp://pagoexito?paymentId=${paymentId}`);
 
         }
     });
