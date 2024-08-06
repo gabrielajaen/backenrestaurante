@@ -83,7 +83,7 @@ app.get('/executePayment', function(req, res) {
         } else {
             console.log(JSON.stringify(payment));
             // Cambiar a una URL de prueba
-            res.redirect(`https://example.com/pagoexito?paymentId=${paymentId}`);
+            res.redirect(`myapp://pagoexito?paymentId=${paymentId}`);
         }
     });
 });
